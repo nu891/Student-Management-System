@@ -1,0 +1,10 @@
+<h1>BOOKS</h1>
+
+<p id="bookcolor">{{bookTitle}}</p>
+<div >
+    
+    <app-card *ngFor="let book of myBooks" [obj]="book"></app-card>
+    <!-- <app-card [title]={{book.title}} [subtitle]={{book.subtitle}} [author]={{book.author}} [description]={{book.description}}
+    [pages]={{book.pages}}></app-card> -->
+
+</div>

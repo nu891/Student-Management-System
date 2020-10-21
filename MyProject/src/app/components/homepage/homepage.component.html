@@ -1,0 +1,12 @@
+<div>
+    User
+
+</div>
+<div *ngIf="user && access">{{username}}</div>
+<input class="newinput" (keyup)="OnKeyUp(titleInput.value)" #titleInput>
+<div>searching for {{search}}</div>
+<div class="row">
+    <div class="col-sm-12">
+        <app-books [bookTitle]="bookTitle"></app-books>
+    </div>
+</div>

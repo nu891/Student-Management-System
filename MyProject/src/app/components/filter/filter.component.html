@@ -1,0 +1,16 @@
+<!-- // add filter option in the search input -->
+
+<img style ="height:10px;width:10px;"src="../../../assets/filter.jpg" (click)="filteroption()">
+<input type="text" name="search" placeholder="Search..">
+<!-- // add filter and orderby pipe in the list of names display -->
+<div *ngIf="!filter">
+<li class="mx-2" *ngFor="let name of Names" >
+  {{name}}
+</li>
+</div>
+
+<div *ngIf="filter">
+  <li class="mx-2" *ngFor="let name of Names|filter:text|orderBy: 'asc'">
+    {{name}}
+  </li>
+</div>

@@ -1,0 +1,44 @@
+<div class="container-fluid jumbotron loginform">
+
+
+    <div class="a-center">
+        <h1><b>STUDENT MANAGEMENT SYSTEM</b></h1>
+
+    </div>
+    <div class="rotate"><img src="../../../assets/student2.jpg"></div>
+    <div class="container">
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" formControlName="username"
+                    placeholder="Enter username" name="username" autocomplete="off">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <show-hide-password  btnStyle="primary" [btnOutline]="false">
+                    
+                    <input type="password" class="form-control" id="password" formControlName="password"
+                        placeholder="Enter password" name="password" autocomplete="off">
+                </show-hide-password>
+
+            </div>
+            <div class="form-group">
+                <label for="userType">User Type:</label>
+                <select class="form-control" formControlName="userType" (change)="changeUser($event.target.value)">
+                    <option value="" disabled>Choose User Type</option>
+                    <option [value]="user" *ngFor="let user of usertype">{{user}}</option>
+
+                </select>
+                <!-- <p><span>You selected: </span><b>{{userType}}</b></p> -->
+            </div>
+            <div class="form-group">
+                <button class="btn loginbtn form-control">Login</button>
+            </div>
+            <div *ngIf="errorFlag">{{errorMsg}}</div>
+            <div class="row ml-2 underlineHover">New User?<a [routerLink]="['/registeruser']">Register Here</a></div>
+        </form>
+
+
+    </div>
+</div>

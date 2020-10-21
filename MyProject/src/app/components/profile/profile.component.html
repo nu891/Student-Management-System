@@ -1,0 +1,214 @@
+
+
+
+<div class="container">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  
+      <ul class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+          <li data-target="#myCarousel" data-slide-to="2"></li>
+          <li data-target="#myCarousel" data-slide-to="3"></li>
+          <li data-target="#myCarousel" data-slide-to="4"></li>
+          <li data-target="#myCarousel" data-slide-to="5"></li>
+        </ul>
+      <div class="carousel-inner">
+          <div class="carousel-item active">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 1</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 2</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 3</div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 4</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 5</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 6</div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 7</div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 8</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 9</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 10</div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 11</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 12</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 13</div>
+                  </div>
+              </div>
+          </div>
+          <div class="carousel-item">
+              <div class="row">
+                  <div class="col-md-4">
+                      <div class="card">Card 14</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 15</div>
+                  </div>
+                  <div class="col-md-4">
+                      <div class="card">Card 16</div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <a class="carousel-control-prev " href="#myCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next " href="#myCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+  </div>
+  </div>
+  
+  
+  <!-- //here starts the people you may know// -->
+  <!-- data-ride="carousel" -->
+  
+  <div class="bg container pt-10">
+      <div id="MyCarousel" class="carousel slide" >
+      
+          <ul class= "carousel-indicators" id="carousel-indicators" >
+              <li data-target="#MyCarousel" *ngFor="let li of pplUmayKnow;let i=index" [attr.data-slide-to]="i" [ngClass]="{'active' : i == 0}"></li>
+              <!-- <li data-target="#MyCarousel" data-slide-to="1"></li> -->
+              <!-- <li data-target="#MyCarousel" data-slide-to="2"></li>
+              <li data-target="#MyCarousel" data-slide-to="3"></li>
+              <li data-target="#MyCarousel" data-slide-to="4"></li>
+              <li data-target="#MyCarousel" data-slide-to="5"></li> -->
+            </ul>
+          <div class="carousel-inner p-t-0 m-t-2" data-target="#MyCarousel" role="listbox" style=" width:100%; height: 500px" >
+              
+              <div class="carousel-item m-t-0" *ngFor="let ppl of pplUmayKnow ;let k = index "[ngClass]="k == 0 ? 'item active' : 'item'">
+                  <div class="row car">
+                      
+                      <div class="col-md-3" *ngFor="let slider of ppl" >
+                        <div class="carousel-card">
+                          <div class="card">Card kellow
+  
+                              <img class="img-circle" src={{slider.profilepic}} alt="Card image">
+                              <div class="card-body">
+                                <div class="card-text">
+                                  <div class="course-heading">
+                                    {{slider.name}}
+                                  </div>
+                                    <div class="card-text jobtitle">{{slider.jobTitle}}</div>
+                                    <div class="card-text company">{{slider.company}}</div>
+                                    <div class="card-text company">
+                                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                      {{slider.jobLocation}}
+                                    </div>
+                                    <div class="as">
+                                      Attestation Score
+                                        <circle-progress
+                                        [percent]= "slider.attestationScore"
+                                        [radius]="10"
+                                        [outerStrokeWidth]="2"
+                                        [innerStrokeWidth]="0"
+                                        [animation]="true"
+                                        [animationDuration]="300"
+                                        [showSubtitle]= "false"
+                                        [showUnits]= "false"
+                                        [titleFontSize]= "9"
+                                        [clockwise]= "true">
+                                     </circle-progress>
+                                    </div>
+                                  
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- <div class="row row-equal carousel-item m-t-0 ">
+                  <div class="row">
+                      
+                      <div class="col-md-4" *ngFor="let ppl of pplUmayKnow">
+                        <div class="carousel-card">
+                          <div class="card">Card kellow
+  
+                              <img class="img-circle" src={{ppl.profilepic}} alt="Card image">
+                              <div class="card-body">
+                                <div class="card-text">
+                                  <div class="course-heading">
+                                    {{ppl.name}}
+                                  </div>
+                                    <div class="card-text jobtitle">{{ppl.jobTitle}}</div>
+                                    <div class="card-text company">{{ppl.company}}</div>
+                                    <div class="card-text company">
+                                      <i class="fa fa-map-marker" aria-hidden="true"></i>
+                                      {{ppl.jobLocation}}
+                                    </div>
+                                    <div class="as">
+                                      Attestation Score
+                                        <circle-progress
+                                        [percent]= "ppl.attestationScore"
+                                        [radius]="10"
+                                        [outerStrokeWidth]="2"
+                                        [innerStrokeWidth]="0"
+                                        [animation]="true"
+                                        [animationDuration]="300"
+                                        [showSubtitle]= "false"
+                                        [showUnits]= "false"
+                                        [titleFontSize]= "9"
+                                        [clockwise]= "true">
+                                     </circle-progress>
+                                    </div>
+                                  
+                                  </div>
+                                </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div> -->
+          </div>
+          <a class="carousel-control-prev "  href="#MyCarousel" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next "  href="#MyCarousel" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+      </div>
+      </div>
+
+
+      

@@ -1,0 +1,37 @@
+.subtitle{
+    color:red;
+    font-size: small;
+
+}
+.title{
+    color:green;
+    font-size: 2px;
+}
+.author{
+    color:violet;
+    font-size: small;
+}
+.Card{
+    /* margin-top:15%; */
+    /* margin-bottom:15%; */
+    border-top: 1em;
+    border-color:black;
+
+    width:50%;
+
+}
+.description{
+    font-size:5px;
+}
+.pages{
+    font-size:2px;
+}
+.appcard{
+    width:15%;
+    margin-bottom: 40px;
+    text-align: center;
+    border-radius: 4px;
+    margin-left:10px;
+    padding: 20px 20px 20px 20px;
+    box-shadow: 0 1px 16px 0 rgba(0, 0, 0, .2), 0 2px 8px 0 rgba(0, 0, 0, .14), 0 4px 8px -1px rgba(0, 0, 0, .12);
+}
