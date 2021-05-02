@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StudentComponent implements OnInit {
 
+  private _opened: boolean = false;
+ 
+  private _toggleSidebar() {
+    this._opened = !this._opened;
+  }
   constructor() { }
 
   ngOnInit() {

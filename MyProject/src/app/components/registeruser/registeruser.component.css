@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+  }
+
+  .container {
+   
+    background-color: white;
+  }
+  p.desc{
+      padding-left:5%;
+  }

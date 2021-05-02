@@ -30,6 +30,9 @@ import { SampleComponent } from './components/sample/sample.component';
 import { BooksComponent } from './components/books/books.component';
 import { CardComponent } from './components/card/card.component';
 import { HomeComponent } from './components/home/home.component';
+import { SideNavbarComponent } from './components/side-navbar/side-navbar.component';
+import { SidebarModule } from 'ng-sidebar';
+
 
 // import { Routes, RouterModule } from '@angular/router'; // CLI imports router
 // const routes: Routes = [];
@@ -58,13 +61,15 @@ import { HomeComponent } from './components/home/home.component';
     SampleComponent,
     BooksComponent,
     CardComponent,
-    HomeComponent
+    HomeComponent,
+    SideNavbarComponent
   ],
   imports: [
     BrowserModule,
     MatSliderModule,
     AppRoutingModule,
     MediumEditorModule,
+    SidebarModule,
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
